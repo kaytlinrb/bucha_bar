@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :kombucha do
-    resources :review
+  root :to => 'home#home'
+
+  resources :kombuchas do
+    resources :reviews
   end
 end

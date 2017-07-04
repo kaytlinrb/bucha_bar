@@ -1,0 +1,6 @@
+<h1>Bucha Bar</h1>
+
+<h2>Most Recent Creations:</h2>
+<% @recent.each do |kombucha| %>
+  <li><%= kombucha.name%></li>
+<% end %>

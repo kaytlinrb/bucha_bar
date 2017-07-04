@@ -1,0 +1,12 @@
+<h1>Edit kombucha</h1>
+
+<% if @kombucha.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @kombucha.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render "form" %>

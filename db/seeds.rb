@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+
+Kombucha.destroy_all
+
+50.times do |index|
+  Kombucha.create!(name: Faker::Hipster.words(2).join(" "),
+                        cost: Faker::Number.between(1, 10),
+                        origin: Faker::Address.city)
+end
+
+
+# Reviews.destroy_all
 #
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# 250.times do |index|
+#   Review.create!(author: Faker::Name.name,
+#                         rating: Faker::Number.between(1, 5),
+#                         content_body: Faker::Hipster.sentence(3),
+#                         kombucha_id: Faker::Number.between(1, 50)
+#                       end

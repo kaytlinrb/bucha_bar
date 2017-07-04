@@ -1,0 +1,12 @@
+<h1>Details</h1>
+
+<h1><%= @kombucha.name %></h1>
+
+<%= link_to "add review", new_kombucha_review_path(@kombucha) %>
+
+
+<p><%= link_to "Update", edit_kombucha_path(@kombucha) %></p>
+
+<p><%= link_to "Delete", kombucha_path(@kombucha),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
