@@ -4,3 +4,14 @@
 <% @recent.each do |kombucha| %>
   <li><%= kombucha.name%></li>
 <% end %>
+
+
+
+
+
+<h2>Most Reviews:</h2>
+<% @most_review.each do |kombucha| %>
+  <p> <%= kombucha.name  %></p>
+  <p> <%= kombucha.cost %></p>
+  <p> <%= kombucha.origin %></p>
+<% end %>

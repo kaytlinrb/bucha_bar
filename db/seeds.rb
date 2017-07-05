@@ -1,4 +1,3 @@
-
 Kombucha.destroy_all
 
 50.times do |index|
@@ -7,12 +6,40 @@ Kombucha.destroy_all
                         origin: Faker::Address.city)
 end
 
+Review.all.each(&:destroy)
 
-# Reviews.destroy_all
-#
-# 250.times do |index|
-#   Review.create!(author: Faker::Name.name,
-#                         rating: Faker::Number.between(1, 5),
-#                         content_body: Faker::Hipster.sentence(3),
-#                         kombucha_id: Faker::Number.between(1, 50)
-#                       end
+
+Kombucha.all.each do |k|
+  Review.create!(author: Faker::Name.name,
+                        rating: Faker::Number.between(1, 5),
+                        content_body: Faker::Hipster.sentence(3),
+                        kombucha_id: k.id)
+end
+Kombucha.all.each do |k|
+  Review.create!(author: Faker::Name.name,
+                        rating: Faker::Number.between(1, 5),
+                        content_body: Faker::Hipster.sentence(3),
+                        kombucha_id: k.id)
+end
+Kombucha.all.each do |k|
+  Review.create!(author: Faker::Name.name,
+                        rating: Faker::Number.between(1, 5),
+                        content_body: Faker::Hipster.sentence(3),
+                        kombucha_id: k.id)
+end
+Kombucha.all.each do |k|
+  Review.create!(author: Faker::Name.name,
+                        rating: Faker::Number.between(1, 5),
+                        content_body: Faker::Hipster.sentence(3),
+                        kombucha_id: k.id)
+end
+Kombucha.all.each do |k|
+  Review.create!(author: Faker::Name.name,
+                        rating: Faker::Number.between(1, 5),
+                        content_body: Faker::Hipster.sentence(3),
+                        kombucha_id: k.id)
+end
+Review.create!(author: Faker::Name.name,
+                        rating: Faker::Number.between(1, 5),
+                        content_body: Faker::Hipster.sentence(3),
+                        kombucha_id: Kombucha.first.id)

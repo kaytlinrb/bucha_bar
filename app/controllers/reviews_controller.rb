@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  
 
   def new
     @kombucha= Kombucha.find(params[:kombucha_id])
@@ -6,6 +7,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
+  @kombucha = Kombucha.find(params[:kombucha_id])
     if @kombucha.reviews.create(review_params)
       redirect_to kombucha_path(@kombucha)
     else
@@ -17,9 +19,7 @@ class ReviewsController < ApplicationController
   private
 
     def review_params
+
       params.require(:review).permit(:author, :content_body, :rating)
-      params.require(:kombucha).permit(:name, :cost, :origin)
     end
-
-
-  end
+end
