@@ -7,13 +7,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <body class= "container">
+        <ul class="nav nav-pills">
+          <a class="navbar-brand" href="/">Bucha Bar</a>
+      <li class="nav navbar-nav" ><a href="/kombuchas">Kombucha Flavors</a></li>
 
-  <body class= "container">
-    <ul class="nav nav-pills">
-      <a class="navbar-brand" href="/">Bucha Bar</a>
-  <li role="presentation"><a href="/kombuchas">Kombucha Flavors</a></li>
-  <li role="presentation"><a href="#">About</a></li>
-</ul>
+    </ul>
+  </div>
+</div>
+</nav>
     <%= yield %>
   </body>
 </html>
