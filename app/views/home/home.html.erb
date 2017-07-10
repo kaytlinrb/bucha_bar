@@ -1,5 +1,8 @@
 <h1>Bucha Bar</h1>
 
+
+<h3>Bucha Bar is a fun, natural hangout spot to grab a quick (healthy!) drink and experiment with different flavors from all over the country! All of our Kombuchas are organic, fresh, and so tasty!</h3>
+
 <h2>Most Recent Creations:</h2>
 <% @recent.each do |kombucha| %>
   <li><%= kombucha.name%></li>
@@ -9,9 +12,18 @@
 
 
 
-<h2>Most Reviews:</h2>
+<h2> Kombucha with the Most Reviews:</h2>
 <% @most_review.each do |kombucha| %>
   <p> <%= kombucha.name  %></p>
   <p> <%= kombucha.cost %></p>
   <p> <%= kombucha.origin %></p>
+<% end %>
+
+
+<h2> Local Kombuchas:</h2>
+
+<% @local_kombuchas.each do |kombucha| %>
+<p> <%= kombucha.name  %></p>
+<p> <%= kombucha.cost %></p>
+<p> <%= kombucha.origin %></p>
 <% end %>

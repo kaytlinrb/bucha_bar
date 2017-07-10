@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  
+
 
   def new
     @kombucha= Kombucha.find(params[:kombucha_id])
@@ -11,7 +11,7 @@ class ReviewsController < ApplicationController
     if @kombucha.reviews.create(review_params)
       redirect_to kombucha_path(@kombucha)
     else
-      render :new
+      redirect_to "SOME_CRAYYYY_PATH"
     end
   end
 
