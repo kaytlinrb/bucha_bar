@@ -1,24 +1,51 @@
-# README
+# _Bucha Bar_
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### By _**Katie Borel**_
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+Kombucha Bar website that contains CRUD functionality for Kombucha flavors and allows users to leave reviews. also contains scopes to display the kombucha with the most reviews, the local (made in seattle) kombuchas, and shows the three newest kombucha flavors.
 
-* System dependencies
 
-* Configuration
+## Installation
+------------
 
-* Database creation
+```
+$ git clone http://localhost:3000/kombuchas/815
+$ cd bucha_bar
+```
 
-* Database initialization
+Install required gems:
+```
+$ bundle install
+```
 
-* How to run the test suite
+Start postgres:
+```
+$ psql
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Create databases:
+```
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+```
 
-* Deployment instructions
+Start the webserver:
+```
+$ rails s
+```
 
-* ...
+Navigate to `localhost:3000` in browser.
+
+
+## Technologies Used
+
+_Ruby on Rails, HTML, CSS_
+
+### License
+
+*MIT*
+
+Copyright (c) 2017 **_Katie Borel_**
