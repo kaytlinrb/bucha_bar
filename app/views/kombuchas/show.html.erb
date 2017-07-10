@@ -1,12 +1,23 @@
 <h1>Details</h1>
 
-<h1><%= @kombucha.name %></h1>
+<h1 class="header"><%= @kombucha.name %></h1>
 
-<%= link_to "add review", new_kombucha_review_path(@kombucha) %>
+<h4>  <%= link_to "add review", new_kombucha_review_path(@kombucha) %></h4>
+
+<%   @reviews.each do |review| %>
+<div class="well">
+
+"<%= review.content_body %>"
+<h5>Author:</h5> <%= review.author %>
+<br>
+<h5>Rating:</h5> <%= review.rating %>
 
 
-<p><%= link_to "Update", edit_kombucha_path(@kombucha) %></p>
+</div>
+<% end %>
 
-<p><%= link_to "Delete", kombucha_path(@kombucha),
+<%= link_to "Update", edit_kombucha_path(@kombucha) %> |
+
+<%= link_to "Delete", kombucha_path(@kombucha),
                          :data => {:confirm => "You sure?",
-                                   :method => "delete"} %></p>
+                                   :method => "delete"} %>

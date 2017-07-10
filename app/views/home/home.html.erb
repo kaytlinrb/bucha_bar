@@ -1,7 +1,9 @@
 <h1>Bucha Bar</h1>
 
 
-<h3>Bucha Bar is a fun, natural hangout spot to grab a quick (healthy!) drink and experiment with different flavors from all over the country! All of our Kombuchas are organic, fresh, and so tasty!</h3>
+<h3 class= "page-header">Bucha Bar <small>is a fun, natural hangout spot to grab a quick (healthy!) drink and experiment with different flavors from all over the country! All of our Kombuchas are organic, fresh, and so tasty!</small></h3>
+
+<div class="well well-lg">
 
 <h2>Most Recent Creations:</h2>
 <% @recent.each do |kombucha| %>
@@ -9,21 +11,27 @@
 <% end %>
 
 
+</div>
+
+<div class="well well-lg">
 
 
 
 <h2> Kombucha with the Most Reviews:</h2>
 <% @most_review.each do |kombucha| %>
-  <p> <%= kombucha.name  %></p>
-  <p> <%= kombucha.cost %></p>
-  <p> <%= kombucha.origin %></p>
+  <p> Flavor: <%= kombucha.name  %></p>
+  <p> $<%= kombucha.cost %></p>
+  <p>  City: <%= kombucha.origin %></p>
 <% end %>
+</div>
+<div class="well well-lg">
 
 
 <h2> Local Kombuchas:</h2>
 
 <% @local_kombuchas.each do |kombucha| %>
-<p> <%= kombucha.name  %></p>
-<p> <%= kombucha.cost %></p>
-<p> <%= kombucha.origin %></p>
+<p> Flavor: <%= kombucha.name  %></p>
+<p> $<%= kombucha.cost %></p>
+<p>  City: <%= kombucha.origin %></p>
 <% end %>
+</div>
